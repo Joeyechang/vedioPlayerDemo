@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QnG-s9-q5t">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--视频播放-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WG-Sl-cWx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ir-Lp-84c">
+                                        <rect key="frame" x="50" y="562" width="109" height="30"/>
+                                        <state key="normal" title="MovieController">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="play" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XEw-nu-J0s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcY-fL-wF0">
+                                        <rect key="frame" x="409" y="562" width="141" height="30"/>
+                                        <state key="normal" title="MovieViewController">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playWithViewController:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OSB-6U-kNq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TcY-fL-wF0" secondAttribute="bottom" constant="8" id="3o2-t5-W35"/>
+                                    <constraint firstItem="7Ir-Lp-84c" firstAttribute="centerX" secondItem="6WG-Sl-cWx" secondAttribute="centerX" constant="-130" id="5PU-0V-QYb"/>
+                                    <constraint firstItem="7Ir-Lp-84c" firstAttribute="leading" secondItem="6WG-Sl-cWx" secondAttribute="leading" constant="50" id="8jQ-zw-kYc"/>
+                                    <constraint firstAttribute="centerX" secondItem="TcY-fL-wF0" secondAttribute="centerX" constant="130" id="Bpk-vm-sxl"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Ir-Lp-84c" secondAttribute="bottom" constant="8" id="DLs-Ei-RUv"/>
+                                    <constraint firstAttribute="trailing" secondItem="TcY-fL-wF0" secondAttribute="trailing" constant="50" id="cBc-OZ-KKM"/>
+                                    <constraint firstItem="TcY-fL-wF0" firstAttribute="leading" secondItem="7Ir-Lp-84c" secondAttribute="trailing" constant="140" id="xkd-Tv-7JJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5PU-0V-QYb"/>
+                                        <exclude reference="Bpk-vm-sxl"/>
+                                        <exclude reference="xkd-Tv-7JJ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6WG-Sl-cWx" secondAttribute="trailing" id="17g-5h-TEz"/>
+                            <constraint firstItem="6WG-Sl-cWx" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="F9x-xV-tQ3"/>
+                            <constraint firstItem="6WG-Sl-cWx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="STS-1f-GuP"/>
+                            <constraint firstItem="6WG-Sl-cWx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="X1g-PV-4du"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="视频播放" id="U6B-Ln-puM"/>
+                    <connections>
+                        <outlet property="playZone" destination="6WG-Sl-cWx" id="TBz-Hs-rg9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="361"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bi7-9x-WiF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QnG-s9-q5t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bn2-oc-WnF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="blT-OC-sno"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zfa-hL-j1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="1002"/>
+        </scene>
+    </scenes>
+</document>
